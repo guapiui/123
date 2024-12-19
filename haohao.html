@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue快速入门</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <!-- 2.编写Vue的视图 -->
+    <div id="app">
+        <!-- v-on: Vue的方式绑定事件 -->
+        <input type="button" value="按钮1" v-on:click="handle"> <br>
+        <input type="button" value="按钮2" @click="handle2"> <br>
+    </div>
+
+    <script>
+        // 3.创建Vue对象, el 指定Vue控制的视图, data 定义数据给视图使用
+        new Vue({
+            el: "#app",
+            data: {
+
+            },
+            methods:{
+                handle: function() {
+                    alert("唐")
+                },
+                handle2: function() {
+                    alert("ovo")
+                }
+            }
+        });
+    </script>
+</body>
+</html>
